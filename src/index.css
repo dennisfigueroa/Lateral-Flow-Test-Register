@@ -63,7 +63,7 @@ body {
 
 @media (min-width: 1200px) {
 .regular-container {
-  max-width: 1140px;
+  max-width: 800px;
 }
 .copyright {
   padding-top:8px;
@@ -74,10 +74,13 @@ body {
 .logo > img {
 margin-top:-30px;
 }
+.form-group > input {
+  width:50%;
+}
 }
 @media (min-width: 992px) and (max-width:1199px){
 .regular-container {
-  max-width: 960px;
+  max-width: 672px;
 }
 .social-media-buttons {
   padding-top:20px;
@@ -86,12 +89,15 @@ margin-top:-30px;
 .logo > img {
   margin-top:-30px;
   }
+  .form-group > input {
+    width:50%;
+  }
 }
 
 
 @media (min-width: 768px) and (max-width:991px){
 .regular-container {
-  max-width: 720px;
+  max-width: 504px;
 }
 .footer {
   height:200px;
@@ -113,7 +119,7 @@ margin-top:-30px;
   max-width: 540px;
 }
 .footer {
-  height:200px;
+  height:378px;
   flex-direction: column;
 }
 .hidenav {
@@ -200,4 +206,17 @@ p {
 .cardborder {
   border: 1px solid #fff;
   box-shadow: 0 2px 4px 2px hsl(0deg 0% 40% / 13%)
+}
+
+.form-list {
+  border: 1px solid #fff;
+      box-shadow: 0 2px 4px 2px hsl(0deg 0% 40% / 13%);
+      background: #fff;
+      border-radius: 0;
+      padding: 2rem 4rem;
+      margin-bottom: 2rem;
+}
+
+.regular-container {
+  margin-top:3rem;
 }

@@ -13,7 +13,7 @@ export default function Footer() {
             <img src={GOVKYLogo} alt="Cayman Islands Government Logo"/>
         </div>
     </div>
-    <div className="regular-container header-shadow">
+    <div className="container header-shadow">
 
         <nav className="navbar navbar-expand-md " style={{paddingTop:'20px', display:'flex', fontWeight: 'bold'}}>
             <div className="logo-container" style={{flex:'50%', display:'flex', fontSize: '18px',color:'#2c3e50'}}>
