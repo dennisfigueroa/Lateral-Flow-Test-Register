@@ -5,6 +5,7 @@ import React from 'react';
  */
 export default function ContactDetails() {
     return (
+        <>
              <div className="form-list">
             <div className="form-group">
                 <label for="exampleInputEmail1">EMAIL</label>
@@ -16,7 +17,10 @@ export default function ContactDetails() {
                 <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Phone" />
             </div>
          
-            </div>
-       
+            </div> 
+            
+            
+            
+       </>
     );
 }
