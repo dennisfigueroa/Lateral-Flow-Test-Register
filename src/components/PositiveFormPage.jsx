@@ -5,27 +5,21 @@ import ContactDetails from './ContactDetails';
  * Footer
  * @return {JSX.Element}
  */
-export default function Home() {
-  const [isLoading, setLoading] = useState(null); 
-    
-  if(isLoading) {
-    return(
-      <div>Hello</div>
-    )
-  }
-  else {
+export default function PositiveFormPage() {
+ 
     return (
-        <div className="regular-container">
             
          <form>
               <PersonalDetails />
               <ContactDetails />
+              <button type="submit" class="btn btn-primary" style={{marginBottom:'20px', marginLeft:'32rem'}}>Submit</button>
+
             </form>
 
           
-              </div>
+
 
     
     );
   }
-}
+

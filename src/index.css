@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+ 
 }
 
 code {
@@ -55,8 +56,6 @@ body {
   justify-content:space-around;
   height:98px;
   background-color: #e2e2e2;
- bottom:0;
- position:absolute;
   width:100%;
   
 }

@@ -10,19 +10,18 @@ export default function PersonalDetails() {
             <div className="form-group">
                 <label for="exampleInputEmail1">FIRST NAME</label>
                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name" />
-                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div className="form-group">
                 <label for="exampleInputPassword1">MIDDLE NAME</label>
-                <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Middle Name" />
             </div>
             <div className="form-group">
                 <label for="exampleInputPassword1">LAST NAME</label>
-                <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Last Name" />
             </div>
             <div className="form-group">
                     <label for="exampleInputPassword1">DATE OF BIRTH</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                    <input type="text" className="form-control" id="exampleInputPassword1" placeholder="MM-DD-YYYY" />
                 </div>
                 <div className="form-group">
                     <label for="exampleInputPassword1">GENDER</label><br />
