@@ -2,6 +2,10 @@ const express = require('express')
 const app = express(); 
 const mongoose = require('mongoose'); 
 const router = express.Router(); 
+const bodyParser = require('body-parser'); 
+
+//Creating middleware where everytime we hit any requets, we make sure the bodyParser runs. 
+app.use(bodyParser.json()); 
 
 
 //Connect to local mongoDB database
@@ -22,9 +26,6 @@ app.get('/', (req, res) => {
     res.send('This is the landing page.'); 
 }); 
 
-app.post('/', (req, res) => {
-    res.send(req.body)
-})
 
 //How we start listening to this server. 
 app.listen(3001, () => console.log("Server started"))
