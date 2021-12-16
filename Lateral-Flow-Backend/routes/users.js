@@ -33,6 +33,8 @@ router.get('/:id', (req, res) => {
 //This function will SUBMIT a post method. 
 router.post('/', async (req, res) => {
    const userPost = new User({
+    dateoftest: req.body.dateoftest, 
+    resultoftest: req.body.resultoftest, 
     firstname: req.body.firstname, 
     middlename: req.body.middlename, 
     lastname: req.body.lastname, 
@@ -48,11 +50,11 @@ router.post('/', async (req, res) => {
        res.json({message: err}); 
    } 
 
-// This will delete an id from the database. 
+// This will delete a user based on the id from the database. 
 router.delete('/:id',  async (req, res) => {
-    try {
-        const removeUser = await User.remove({_id: req.params.id}); 
-        res.json(removedUser); 
+    try {   
+        const removeUser = await User.deleteOne({_id: req.params.id}); 
+        res.json(removeUser); 
     }
      catch (err) {
          res.status(404).json({message: err}); 
@@ -60,11 +62,10 @@ router.delete('/:id',  async (req, res) => {
      }
 }
 )
-
 // This will update a user based on the ID from the database. 
-router.update('/:id',  async (req, res) => {
+router.patch('/:id',  async (req, res) => {
     try {
-        const updatedUser = await User.updateOne({_id: req.params.id}); 
+        const updatedUser = await User.updateOne({_id: req.params.id},{$set: { firstname: req.body.firstname}}); 
         res.json(updatedUser); 
     }
      catch (err) {

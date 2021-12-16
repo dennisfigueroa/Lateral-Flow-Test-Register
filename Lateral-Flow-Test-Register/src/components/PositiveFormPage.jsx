@@ -9,7 +9,7 @@ export default function PositiveFormPage() {
  
     return (
             
-         <form>
+         <form method="post">
               <PersonalDetails />
               <ContactDetails />
               <button type="submit" class="btn btn-primary" style={{marginBottom:'20px', marginLeft:'32rem'}}>Submit</button>

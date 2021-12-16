@@ -5,18 +5,18 @@ import React from 'react';
  */
 export default function PersonalDetails() {
     return (
-            
+          
             <div className ="form-list">
             <div className="form-group">
-                <label for="exampleInputEmail1">FIRST NAME</label>
-                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name" />
+                <label for="validationDefault01">FIRST NAME</label>
+                <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name" />
             </div>
             <div className="form-group">
-                <label for="exampleInputPassword1">MIDDLE NAME</label>
+                <label for="validationDefault02">MIDDLE NAME</label>
                 <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Middle Name" />
             </div>
             <div className="form-group">
-                <label for="exampleInputPassword1">LAST NAME</label>
+                <label for="validationDefault03">LAST NAME</label>
                 <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Last Name" />
             </div>
             <div className="form-group">
