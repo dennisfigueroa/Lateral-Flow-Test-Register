@@ -1,11 +1,13 @@
 const express = require('express')
 const app = express(); 
 const mongoose = require('mongoose'); 
-const router = express.Router(); 
 const bodyParser = require('body-parser'); 
+const cors = require('cors');
 
 //Creating middleware where everytime we hit any requets, we make sure the bodyParser runs. 
 app.use(bodyParser.json()); 
+
+app.use(cors()); 
 
 
 //Connect to local mongoDB database
