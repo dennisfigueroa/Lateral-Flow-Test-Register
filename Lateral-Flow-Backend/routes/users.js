@@ -33,6 +33,8 @@ router.get('/:id', (req, res) => {
 //This function will SUBMIT a post method. 
 router.post('/', async (req, res) => {
    const userPost = new User({
+    testresult: req.body.testresult,
+    dateoftest: req.body.dateoftest,
     firstname: req.body.firstname, 
     middlename: req.body.middlename, 
     lastname: req.body.lastname, 

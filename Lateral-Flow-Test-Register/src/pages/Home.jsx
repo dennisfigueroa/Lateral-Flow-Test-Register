@@ -32,10 +32,6 @@ export default function Home() {
 
         <div className="form-list">
           <div className="form-group">
-            <label for="exampleInputEmail1">DATE OF TEST</label>
-            <input type="email" className="form-control" id="dateoftest" aria-describedby="emailHelp" placeholder="MM-DD-YYYY" />
-          </div>
-          <div className="form-group">
             <label for="exampleInputPassword1">RESULT OF TEST</label>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" value="positive" id="resultoftest" onChange={handleChange} />

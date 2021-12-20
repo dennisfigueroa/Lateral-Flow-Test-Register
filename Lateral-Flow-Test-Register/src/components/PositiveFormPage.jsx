@@ -11,13 +11,14 @@ export default function PersonalDetails() {
     const [dateofbirth, setDateOfBirth] = useState(''); 
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState(''); 
-    
+    const [dateoftest, setDateOfTest] = useState(''); 
+    const testresult = 'positive';
     const [isPending, setIsPending] = useState(false);
     
     const handleSubmit = (e) => {
         e.preventDefault(); 
         setIsPending('true'); 
-        const user = { firstname, middlename, lastname, dateofbirth, email, phone }
+        const user = { testresult, dateoftest, firstname, middlename, lastname, dateofbirth, email, phone }
         fetch('http://localhost:3001/users', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
@@ -32,9 +33,13 @@ export default function PersonalDetails() {
     return (
         <form onSubmit={handleSubmit}  method="post" id="positiveFormPage">
         <div className ="form-list">
+        <div className="form-group">
+            <label for="validationDefault01">DATE OF TEST</label>
+            <input onChange ={(e) => setDateOfTest(e.target.value)} type="date" className="form-control" id="dateoftest"  placeholder="MM-DD-YYYY" />
+          </div>
             <div className="form-group">
                 <label for="validationDefault01">FIRST NAME</label>
-                <input value ={firstname} onChange={(e) => setfirstname(e.target.value)} type="text" className="form-control" id="firstname" aria-describedby="emailHelp" placeholder="First Name" />
+                <input value ={firstname} onChange={(e) => setfirstname(e.target.value)} type="text" className="form-control" id="firstname"  placeholder="First Name" />
             </div>
             <div className="form-group">
                 <label for="validationDefault02">MIDDLE NAME</label>
