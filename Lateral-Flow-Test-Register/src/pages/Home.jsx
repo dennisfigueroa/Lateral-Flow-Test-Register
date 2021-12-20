@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import PositiveFormPage from '../components/PositiveFormPage';
 import NegativeFormPage from '../components/NegativeFormPage';
+import PositiveFormPage from '../components/PositiveFormPage'; 
 /**
  * Footer
  * @return {JSX.Element}
@@ -28,16 +28,17 @@ export default function Home() {
   return (
     <div className="regular-container" style={{minHeight:'65vh'}}>
 
-      <form>
+      <form id="testData">
+
         <div className="form-list">
           <div className="form-group">
             <label for="exampleInputEmail1">DATE OF TEST</label>
-            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="MM-DD-YYYY" />
+            <input type="email" className="form-control" id="dateoftest" aria-describedby="emailHelp" placeholder="MM-DD-YYYY" />
           </div>
           <div className="form-group">
             <label for="exampleInputPassword1">RESULT OF TEST</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" value="positive" id="flexRadioDefault1" onChange={handleChange} />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" value="positive" id="resultoftest" onChange={handleChange} />
               <label class="form-check-label" for="flexRadioDefault1">
               &nbsp;Positive
   </label>
@@ -49,11 +50,9 @@ export default function Home() {
   </label>
             </div>
           </div>
-
-
-
-
         </div>
+
+
       </form>
       {isLoading && <PositiveFormPage /> }
       {(isLoading === false) && <NegativeFormPage />}
