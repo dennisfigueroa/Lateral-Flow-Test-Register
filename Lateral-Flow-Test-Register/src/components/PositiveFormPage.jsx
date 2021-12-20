@@ -12,14 +12,20 @@ export default function PersonalDetails() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState(''); 
     
+    const [isPending, setIsPending] = useState(false);
+    
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        const user = {firstname, middlename, lastname, dateofbirth, email, phone}
-        fetch('http://localhost:3001/users' , {
-        method: 'POST', 
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(user)
-        }).then(() => {console.log("New user added")})   
+        setIsPending('true'); 
+        const user = { firstname, middlename, lastname, dateofbirth, email, phone }
+        fetch('http://localhost:3001/users', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(user)
+        }).then(() => { 
+            console.log("New user added");
+            setIsPending(false); 
+     })
     }
 
 
@@ -71,8 +77,8 @@ export default function PersonalDetails() {
              </div>
           
              </div> 
-             <button type="submit" class="btn btn-primary" style={{marginBottom:'20px', marginLeft:'32rem'}}>Submit</button>
-
+             {!isPending && <button type="submit" class="btn btn-primary" style={{marginBottom:'20px', marginLeft:'32rem'}}>Submit</button>}
+             {  isPending && <button class="btn btn-primary" disabled style={{marginBottom:'20px', marginLeft:'32rem'}}>Adding user...</button>}
             </form>
        
     );
