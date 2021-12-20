@@ -10,6 +10,10 @@ export default function PositiveFormPage() {
             
                 <form>
                     <div className="form-list">
+                    <div className="form-group">
+            <label for="exampleInputEmail1">DATE OF TEST</label>
+            <input type="email" className="form-control" id="dateoftest" aria-describedby="emailHelp" placeholder="MM-DD-YYYY" />
+          </div>
                         <div className="form-group">
                             <label for="exampleInputEmail1" >SCHOOL</label>
                             <div class="input-group mb-3" >
